@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( FisherFaces )
+find_package( OpenCV )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( FisherFaces "main.cpp" "testing.cpp" "user_acquisition.cpp" "model_management.cpp" )
+target_link_libraries( FisherFaces ${OpenCV_LIBS} )
